@@ -1,0 +1,11 @@
+{
+    "title": "JSON Schema Tutorial",
+    "author": "hypc",
+    "plugins": [
+        "theme-opendocs",
+        "-sharing",
+        "-fontsettings"
+    ],
+    "pluginsConfig": {},
+    "gitbook": ">=3.0.0"
+}

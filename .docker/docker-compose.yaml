@@ -1,0 +1,11 @@
+version: "2"
+services:
+    master:
+        build:
+            context: ..
+            dockerfile: .docker/Dockerfile
+        image: json-schema
+        container_name: json-schema
+        ports:
+            - 4020:4000
+        restart: always
