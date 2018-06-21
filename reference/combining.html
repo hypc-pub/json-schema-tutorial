@@ -1,0 +1,478 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>组合模式 · JSON Schema Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="allOf.html" />
+    
+    
+    <link rel="prev" href="generic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>JSON Schema Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="allOf.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="generic.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../about/about.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            什么是模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../basics/basics.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            基础
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="reference.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            JSON Schema手册
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="type.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            Type定义
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="generic.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            通用关键字
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="combining.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            组合模式
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="allOf.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            allOf
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="anyOf.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            anyOf
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="oneOf.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            oneOf
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="not.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            not
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="schema.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            $schema关键字
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="regular_expressions.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            正则表达式
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../structuring/structuring.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            构建一个复杂的模式
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x7EC4;&#x5408;&#x6A21;&#x5F0F;">&#x7EC4;&#x5408;&#x6A21;&#x5F0F;</h1>
+<p><code>JSON Schema</code>&#x5141;&#x8BB8;&#x5C06;&#x51E0;&#x4E2A;schema&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x5E76;&#x610F;&#x5473;&#x7740;&#x53EF;&#x4EE5;&#x5C06;&#x591A;&#x4E2A;<code>JSON Schema</code>&#x6587;&#x4EF6;
+&#x6216;<code>JSON Schema</code>&#x7ED3;&#x6784;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;&#x7EC4;&#x5408;&#x6A21;&#x5F0F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x50CF;&#x5141;&#x8BB8;&#x4E00;&#x4E2A;&#x503C;&#x540C;&#x65F6;&#x5BF9;&#x591A;&#x4E2A;&#x6807;&#x51C6;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#x4E00;&#x6837;&#x3002;</p>
+<ul>
+<li><a href="allOf.html">allOf</a></li>
+<li><a href="anyOf.html">anyOf</a></li>
+<li><a href="oneOf.html">oneOf</a></li>
+<li><a href="not.html">not</a></li>
+</ul>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema</span>
+{
+    <span class="hljs-string">&quot;anyOf&quot;</span>: [
+        { <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>, <span class="hljs-string">&quot;maxLength&quot;</span>: <span class="hljs-number">5</span> },
+        { <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>, <span class="hljs-string">&quot;minimum&quot;</span>: <span class="hljs-number">0</span> }
+    ]
+}
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+<span class="hljs-string">&quot;short&quot;</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+<span class="hljs-string">&quot;too long&quot;</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+<span class="hljs-number">12</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+<span class="hljs-number">-5</span>
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"组合模式","level":"1.4.3","depth":2,"next":{"title":"allOf","level":"1.4.3.1","depth":3,"path":"reference/allOf.md","ref":"reference/allOf.md","articles":[]},"previous":{"title":"通用关键字","level":"1.4.2","depth":2,"path":"reference/generic.md","ref":"reference/generic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"JSON Schema Tutorial","gitbook":">=3.0.0"},"file":{"path":"reference/combining.md","mtime":"2018-06-21T11:52:24.472Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:53:29.807Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

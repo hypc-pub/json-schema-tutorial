@@ -1,0 +1,394 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>什么是模式 · JSON Schema Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="../basics/basics.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>JSON Schema Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="../basics/basics.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="../" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="about.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            什么是模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../basics/basics.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            基础
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../reference/reference.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            JSON Schema手册
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../structuring/structuring.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            构建一个复杂的模式
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x4EC0;&#x4E48;&#x662F;schema">&#x4EC0;&#x4E48;&#x662F;Schema</h1>
+<p>&#x5982;&#x679C;&#x4F60;&#x7528;&#x8FC7;<code>XML Schema</code>&#x3001;<code>RelaxNG</code>&#x6216;&#x8005;<code>ASN.1</code>&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4E5F;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86;&#x4EC0;&#x4E48;&#x662F;Schema&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x8BE5;&#x7AE0;&#x8282;&#x3002;
+&#x5728;&#x5F00;&#x59CB;&#x5B66;&#x4E60;<code>JSON Schema</code>&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5148;&#x5B66;&#x4E60;<code>JSON</code>&#x3002;</p>
+<p><code>JSON</code>&#xFF08;<code>JavaScript</code>&#x5BF9;&#x8C61;&#x6807;&#x8BB0;&#xFF09;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;&#x3002;&#x5B83;&#x6700;&#x5F00;&#x59CB;&#x5E94;&#x7528;&#x4E8E;&#x4E07;&#x7EF4;&#x7F51;&#x3002;
+&#x73B0;&#x5728;&#x7531;&#x4E8E;<code>JavaScript</code>&#x5B58;&#x5728;&#x4E8E;&#x5927;&#x591A;&#x6570;web&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;<code>JSON</code>&#x57FA;&#x4E8E;<code>JavaScript</code>&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x3002;
+&#x7136;&#x800C;&#xFF0C;&#x5B83;&#x8DB3;&#x591F;&#x7B80;&#x5355;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x5230;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x7528;web&#x9875;&#x9762;&#x4E2D;&#x3002;</p>
+<p><code>JSON</code>&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6784;&#x5EFA;&#x4EE5;&#x4E0B;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A;</p>
+<ul>
+<li><p>&#x5BF9;&#x8C61;</p>
+<pre><code class="lang-json">  { <span class="hljs-string">&quot;key1&quot;</span>: <span class="hljs-string">&quot;value1&quot;</span>, <span class="hljs-string">&quot;key2&quot;</span>: <span class="hljs-string">&quot;value2&quot;</span> }
+</code></pre>
+</li>
+<li><p>&#x6570;&#x7EC4;</p>
+<pre><code class="lang-json">  [ <span class="hljs-string">&quot;first&quot;</span>, <span class="hljs-string">&quot;second&quot;</span>, <span class="hljs-string">&quot;third&quot;</span> ]
+</code></pre>
+</li>
+<li><p>&#x6570;&#x5B57;</p>
+<pre><code class="lang-json">  <span class="hljs-number">42</span>
+  <span class="hljs-number">3.141592653589793</span>
+</code></pre>
+</li>
+<li><p>&#x5B57;&#x7B26;&#x4E32;</p>
+<pre><code class="lang-json">  <span class="hljs-string">&quot;This is a string&quot;</span>
+</code></pre>
+</li>
+<li><p>&#x5E03;&#x5C14;&#x503C;</p>
+<pre><code class="lang-json">  <span class="hljs-literal">true</span>
+  <span class="hljs-literal">false</span>
+</code></pre>
+</li>
+<li><p>null</p>
+<pre><code class="lang-json">  <span class="hljs-literal">null</span>
+</code></pre>
+</li>
+</ul>
+<p>&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5728;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E2D;&#x4E5F;&#x5B58;&#x5728;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x7684;&#x5BF9;&#x6BD4;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>JavaScript</th>
+<th>Python</th>
+<th>Java</th>
+<th>Ruby</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>string</td>
+<td>String</td>
+<td>String</td>
+</tr>
+<tr>
+<td>number</td>
+<td>int/float</td>
+<td>int/float/double</td>
+<td>Integer/Float</td>
+</tr>
+<tr>
+<td>object</td>
+<td>dict</td>
+<td>Map</td>
+<td>Hash</td>
+</tr>
+<tr>
+<td>array</td>
+<td>list/tuple</td>
+<td>Array</td>
+<td>Array</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>bool</td>
+<td>boolean</td>
+<td>TrueClass/FalseClass</td>
+</tr>
+<tr>
+<td>null</td>
+<td>None</td>
+<td>null</td>
+<td>NilClass</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x5404;&#x79CD;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x3002;
+&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x79CD;&#x5DE8;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;&#x5E26;&#x6765;&#x4E86;&#x5DE8;&#x5927;&#x7684;&#x8D23;&#x4EFB;&#xFF0C;&#x56E0;&#x4E3A;&#x540C;&#x6837;&#x7684;&#x6982;&#x5FF5;&#x53EF;&#x4EE5;&#x7528;&#x65E0;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8868;&#x793A;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x4EBA;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;George Washington&quot;</span>,
+    <span class="hljs-string">&quot;birthday&quot;</span>: <span class="hljs-string">&quot;February 22, 1992&quot;</span>,
+    <span class="hljs-string">&quot;address&quot;</span>: <span class="hljs-string">&quot;Mount Vernon, Virginia, United States&quot;</span>
+}
+
+{
+    <span class="hljs-string">&quot;first_name&quot;</span>: <span class="hljs-string">&quot;George&quot;</span>,
+    <span class="hljs-string">&quot;last_name&quot;</span>: <span class="hljs-string">&quot;Washington&quot;</span>,
+    <span class="hljs-string">&quot;birthday&quot;</span>: <span class="hljs-string">&quot;1992-02-22&quot;</span>,
+    <span class="hljs-string">&quot;address&quot;</span>: {
+        <span class="hljs-string">&quot;street_address&quot;</span>: <span class="hljs-string">&quot;3200 Mount Vernon Memorial Highway&quot;</span>,
+        <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Mount Vernon&quot;</span>,
+        <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;Virginia&quot;</span>,
+        <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;United States&quot;</span>
+    }
+}
+</code></pre>
+<p>&#x8FD9;&#x4E24;&#x79CD;&#x63CF;&#x8FF0;&#x90FD;&#x662F;&#x6709;&#x6548;&#x7684;&#xFF0C;&#x4F46;&#x660E;&#x663E;&#x80FD;&#x770B;&#x51FA;&#x5176;&#x4E2D;&#x4E00;&#x79CD;&#x6BD4;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x66F4;&#x4E3A;&#x6B63;&#x5F0F;&#x3002;
+&#x6570;&#x636E;&#x683C;&#x5F0F;&#x7684;&#x8BBE;&#x8BA1;&#x5F88;&#x5927;&#x7A0B;&#x5EA6;&#x4E0A;&#x53D6;&#x51B3;&#x4E8E;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x6B63;&#x786E;&#x6216;&#x9519;&#x8BEF;&#x7684;&#x7B54;&#x6848;&#x3002;
+&#x4F46;&#x662F;&#xFF0C;&#x5F53;&#x9700;&#x8981;&#x4EA4;&#x4E92;&#x65F6;&#xFF0C;&#x77E5;&#x9053;&#x6570;&#x636E;&#x662F;&#x600E;&#x4E48;&#x7EC4;&#x7EC7;&#x7684;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4EF6;&#x4E8B;&#x3002;&#x8FD9;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;<code>JSON Schema</code>&#x3002;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-string">&quot;properties&quot;</span>: {
+        <span class="hljs-string">&quot;first_name&quot;</span>: { <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span> },
+        <span class="hljs-string">&quot;last_name&quot;</span>: { <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span> },
+        <span class="hljs-string">&quot;birthday&quot;</span>: { <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>, <span class="hljs-string">&quot;format&quot;</span>: <span class="hljs-string">&quot;date-time&quot;</span> },
+        <span class="hljs-string">&quot;address&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-string">&quot;properties&quot;</span>: {
+                <span class="hljs-string">&quot;street_address&quot;</span>: { <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span> },
+                <span class="hljs-string">&quot;city&quot;</span>: { <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span> },
+                <span class="hljs-string">&quot;state&quot;</span>: { <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span> },
+                <span class="hljs-string">&quot;country&quot;</span>: { <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;string&quot;</span> }
+            }
+        }
+    }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x5931;&#x8D25;&#xFF0C;&#x800C;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x6210;&#x529F;&#x3002;</p>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"什么是模式","level":"1.2","depth":1,"next":{"title":"基础","level":"1.3","depth":1,"path":"basics/basics.md","ref":"basics/basics.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"JSON Schema Tutorial","gitbook":">=3.0.0"},"file":{"path":"about/about.md","mtime":"2018-06-21T11:52:24.472Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:53:29.807Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

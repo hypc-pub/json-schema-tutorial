@@ -1,0 +1,637 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>array · JSON Schema Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="boolean.html" />
+    
+    
+    <link rel="prev" href="object.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>JSON Schema Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="boolean.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="object.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../about/about.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            什么是模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../basics/basics.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            基础
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="reference.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            JSON Schema手册
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="type.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            Type定义
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="string.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            string
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="numeric.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            numeric types
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="object.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            object
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="array.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            array
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="boolean.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            boolean
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="null.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            null
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="generic.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            通用关键字
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="combining.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            组合模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="schema.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            $schema关键字
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="regular_expressions.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            正则表达式
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../structuring/structuring.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            构建一个复杂的模式
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="array">array</h1>
+<p>&#x5728;JSON&#x4E2D;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#x90FD;&#x53EF;&#x80FD;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema</span>
+{ <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span> }
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">3</span>, <span class="hljs-string">&quot;different&quot;</span>, { <span class="hljs-string">&quot;types&quot;</span> : <span class="hljs-string">&quot;of values&quot;</span> }]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+{<span class="hljs-string">&quot;Not&quot;</span>: <span class="hljs-string">&quot;an array&quot;</span>}
+</code></pre>
+<h2 id="items">Items</h2>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x901A;&#x5E38;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x9650;&#x5236;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>items</code>&#x548C;<code>additionalItems</code>&#x5173;&#x952E;&#x5B57;&#x3002;</p>
+<p>&#x5728;JSON&#x4E2D;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x6821;&#x9A8C;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#xFF1A;</p>
+<ul>
+<li><strong>List validation</strong>: &#x4EFB;&#x610F;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x5339;&#x914D;&#x540C;&#x4E00;&#x7C7B;&#x578B;&#x3002;</li>
+<li><strong>Tuple validation</strong>: &#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x53EF;&#x80FD;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#x4E0E;&#x7D22;&#x5F15;&#x9879;&#x6709;&#x5173;&#x3002;</li>
+</ul>
+<h3 id="list-validation">List validation</h3>
+<p>&#x4EFB;&#x610F;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x5339;&#x914D;&#x540C;&#x4E00;&#x7C7B;&#x578B;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5355;&#x4E2A;<code>items</code>&#x5173;&#x952E;&#x5B57;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>additionalItems</code>&#x5173;&#x952E;&#x5B57;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#xFF0C;&#x5B83;&#x4E5F;&#x4E0D;&#x80FD;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema</span>
+{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+    <span class="hljs-string">&quot;items&quot;</span>: {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+    }
+}
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// faliure</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&quot;3&quot;</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[]
+</code></pre>
+<h3 id="tuple-validation">Tuple validation</h3>
+<p>&#x5F53;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E00;&#x9879;&#x5177;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x800C;&#x4E14;&#x5B83;&#x4EEC;&#x7684;&#x7C7B;&#x578B;&#x53C8;&#x4E0D;&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Tuple validation&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x8857;&#x9053;&#x5730;&#x5740;&#xFF1A;</p>
+<pre><code>1600 Pennsylvania Avenue NW
+</code></pre><p>&#x5B83;&#x4EEC;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF1A;</p>
+<pre><code>[number, street_name, street_type, direction]
+</code></pre><p>&#x4E3A;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6821;&#x9A8C;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x6309;&#x987A;&#x5E8F;&#x6821;&#x9A8C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema</span>
+{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+    <span class="hljs-string">&quot;items&quot;</span>: [{
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+    }, {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }, {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-string">&quot;enum&quot;</span>: [<span class="hljs-string">&quot;Street&quot;</span>, <span class="hljs-string">&quot;Avenue&quot;</span>, <span class="hljs-string">&quot;Boulevard&quot;</span>]
+    }, {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-string">&quot;enum&quot;</span>: [<span class="hljs-string">&quot;NW&quot;</span>, <span class="hljs-string">&quot;NE&quot;</span>, <span class="hljs-string">&quot;SW&quot;</span>, <span class="hljs-string">&quot;SE&quot;</span>]
+    }]
+}
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1600</span>, <span class="hljs-string">&quot;Pennsylvania&quot;</span>, <span class="hljs-string">&quot;Avenue&quot;</span>, <span class="hljs-string">&quot;NW&quot;</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+[<span class="hljs-number">24</span>, <span class="hljs-string">&quot;Sussex&quot;</span>, <span class="hljs-string">&quot;Drive&quot;</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+[<span class="hljs-string">&quot;Palais de l&apos;&#xC9;lys&#xE9;e&quot;</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">10</span>, <span class="hljs-string">&quot;Downing&quot;</span>, <span class="hljs-string">&quot;Street&quot;</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1600</span>, <span class="hljs-string">&quot;Pennsylvania&quot;</span>, <span class="hljs-string">&quot;Avenue&quot;</span>, <span class="hljs-string">&quot;NW&quot;</span>, <span class="hljs-string">&quot;Washington&quot;</span>]
+</code></pre>
+<p><code>additionalItems</code>&#x5173;&#x952E;&#x5B57;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x6709;&#x989D;&#x5916;&#x7684;&#x5143;&#x7D20;&#x3002;
+&#x5F53;<code>additionalItems</code>&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x4E3A;false&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4E0D;&#x5141;&#x8BB8;&#x6709;&#x989D;&#x5916;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema</span>
+{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+    <span class="hljs-string">&quot;items&quot;</span>: [{
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+    }, {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }, {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-string">&quot;enum&quot;</span>: [<span class="hljs-string">&quot;Street&quot;</span>, <span class="hljs-string">&quot;Avenue&quot;</span>, <span class="hljs-string">&quot;Boulevard&quot;</span>]
+    }, {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-string">&quot;enum&quot;</span>: [<span class="hljs-string">&quot;NW&quot;</span>, <span class="hljs-string">&quot;NE&quot;</span>, <span class="hljs-string">&quot;SW&quot;</span>, <span class="hljs-string">&quot;SE&quot;</span>]
+    }],
+    <span class="hljs-string">&quot;additionalItems&quot;</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1600</span>, <span class="hljs-string">&quot;Pennsylvania&quot;</span>, <span class="hljs-string">&quot;Avenue&quot;</span>, <span class="hljs-string">&quot;NW&quot;</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1600</span>, <span class="hljs-string">&quot;Pennsylvania&quot;</span>, <span class="hljs-string">&quot;Avenue&quot;</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+[<span class="hljs-number">1600</span>, <span class="hljs-string">&quot;Pennsylvania&quot;</span>, <span class="hljs-string">&quot;Avenue&quot;</span>, <span class="hljs-string">&quot;NW&quot;</span>, <span class="hljs-string">&quot;Washington&quot;</span>]
+</code></pre>
+<h2 id="length">Length</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>minItems</code>&#x548C;<code>maxItems</code>&#x6765;&#x9650;&#x5236;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#x3002;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema</span>
+{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+    <span class="hljs-string">&quot;minItems&quot;</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;maxItems&quot;</span>: <span class="hljs-number">3</span>
+}
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+[]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+[<span class="hljs-number">1</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+</code></pre>
+<h2 id="uniqueness">Uniqueness</h2>
+<p>&#x5F53;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x552F;&#x4E00;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57;<code>uniqueItems</code>&#xFF0C;&#x5E76;&#x5C06;&#x503C;&#x8BBE;&#x4E3A;true&#x3002;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema</span>
+{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+    <span class="hljs-string">&quot;uniqueItems&quot;</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// failure</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-comment">// success</span>
+[]
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"array","level":"1.4.1.4","depth":3,"next":{"title":"boolean","level":"1.4.1.5","depth":3,"path":"reference/boolean.md","ref":"reference/boolean.md","articles":[]},"previous":{"title":"object","level":"1.4.1.3","depth":3,"path":"reference/object.md","ref":"reference/object.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"JSON Schema Tutorial","gitbook":">=3.0.0"},"file":{"path":"reference/array.md","mtime":"2018-06-21T11:52:24.472Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:53:29.807Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

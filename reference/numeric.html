@@ -1,0 +1,563 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>numeric types · JSON Schema Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="object.html" />
+    
+    
+    <link rel="prev" href="string.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>JSON Schema Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="object.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="string.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../about/about.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            什么是模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../basics/basics.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            基础
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="reference.html" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            JSON Schema手册
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="type.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            Type定义
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="string.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            string
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="numeric.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            numeric types
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="object.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            object
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="array.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            array
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="boolean.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            boolean
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="null.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            null
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="generic.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            通用关键字
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="combining.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            组合模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="schema.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            $schema关键字
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="regular_expressions.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            正则表达式
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../structuring/structuring.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            构建一个复杂的模式
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x6570;&#x5B57;&#x7C7B;&#x578B;">&#x6570;&#x5B57;&#x7C7B;&#x578B;</h1>
+<p>&#x5728;<code>JSON Schema</code>&#x4E2D;&#x6709;&#x4E24;&#x79CD;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#xFF1A;<code>integer</code>&#x548C;<code>number</code>&#x3002;</p>
+<h2 id="integer">integer</h2>
+<p><code>integer</code>&#x7C7B;&#x578B;&#x7528;&#x6765;&#x6821;&#x9A8C;&#x6574;&#x6570;&#x3002;</p>
+<pre><code class="lang-json">{ <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span> }       <span class="hljs-comment">// a schema</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">42</span>          <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">-12</span>         <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">3.1415</span>      <span class="hljs-comment">// failure</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-string">&quot;42&quot;</span>        <span class="hljs-comment">// failure</span>
+</code></pre>
+<h2 id="number">number</h2>
+<p><code>number</code>&#x7C7B;&#x578B;&#x80FD;&#x7528;&#x4E8E;&#x4EFB;&#x4F55;&#x6570;&#x5B57;&#xFF0C;&#x5305;&#x62EC;&#x6574;&#x6570;&#x4EE5;&#x53CA;&#x6D6E;&#x70B9;&#x6570;&#x3002;</p>
+<pre><code class="lang-json">{ <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;number&quot;</span> }        <span class="hljs-comment">// a schema</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">42</span>          <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">-12</span>         <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">3.1415</span>      <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-string">&quot;42&quot;</span>        <span class="hljs-comment">// failure</span>
+</code></pre>
+<h2 id="multiples">Multiples</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>multipleOf</code>&#x5173;&#x952E;&#x5B57;&#x5C06;&#x6570;&#x5B57;&#x9650;&#x5236;&#x4E3A;&#x7ED9;&#x5B9A;&#x6570;&#x5B57;&#x7684;&#x500D;&#x6570;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x4EFB;&#x4F55;&#x6B63;&#x6570;&#x3002;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema</span>
+{
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-string">&quot;multipleOf&quot;</span>: <span class="hljs-number">10</span>
+}
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">0</span>           <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">10</span>          <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">30</span>          <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">23</span>          <span class="hljs-comment">// failure&#xFF0C;&#x4E0D;&#x662F;10&#x7684;&#x500D;&#x6570;</span>
+</code></pre>
+<h2 id="range">Range</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x5173;&#x952E;&#x5B57;&#x9650;&#x5236;&#x6570;&#x5B57;&#x7684;&#x8303;&#x56F4;&#xFF1A;</p>
+<ul>
+<li><strong>minimum</strong>: &#x6700;&#x5C0F;&#x503C;&#x3002;</li>
+<li><strong>exclusiveMinimum</strong>: &#x662F;&#x4E00;&#x4E2A;boolean&#x503C;&#xFF0C;&#x5F53;&#x503C;&#x4E3A;true&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x6570;&#x5B57;&#x5FC5;&#x987B;&#x5927;&#x4E8E;&#x6700;&#x5C0F;&#x503C;&#xFF0C;<code>x &gt; min</code>&#x3002;
+  &#x5F53;&#x503C;&#x4E3A;false&#xFF08;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x8BE5;&#x5C5E;&#x6027;&#xFF09;&#x65F6;&#xFF0C;&#x6570;&#x5B57;&#x53EF;&#x4EE5;&#x7B49;&#x4E8E;&#x6700;&#x5C0F;&#x503C;&#xFF0C;<code>x &gt;= min</code>&#x3002;</li>
+<li><strong>maximum</strong>: &#x6700;&#x5927;&#x503C;&#x3002;</li>
+<li><strong>exclusiveMaximum</strong>: &#x662F;&#x4E00;&#x4E2A;boolean&#x503C;&#xFF0C;&#x5F53;&#x503C;&#x4E3A;true&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x6570;&#x5B57;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x6700;&#x5927;&#x503C;&#xFF0C;<code>x &lt; max</code>&#x3002;
+  &#x5F53;&#x503C;&#x4E3A;false&#xFF08;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x8BE5;&#x5C5E;&#x6027;&#xFF09;&#x65F6;&#xFF0C;&#x6570;&#x5B57;&#x53EF;&#x4EE5;&#x7B49;&#x4E8E;&#x6700;&#x5927;&#x503C;&#xFF0C;<code>x &lt;= max</code>&#x3002;</li>
+</ul>
+<pre><code class="lang-json"><span class="hljs-comment">// a schema&#xFF0C;&#x503C;&#x5E94;&#x8BE5;&#x662F; 0 &lt;= x &lt; 100</span>
+{
+  <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-string">&quot;minimum&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;maximum&quot;</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-string">&quot;exclusiveMaximum&quot;</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">-1</span>          <span class="hljs-comment">// failure&#xFF0C;&#x503C;&#x5C0F;&#x4E8E;0</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">0</span>           <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">1</span>           <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">10</span>          <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">99</span>          <span class="hljs-comment">// success</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">100</span>         <span class="hljs-comment">// failure&#xFF0C;&#x503C;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;100</span>
+</code></pre>
+<pre><code class="lang-json"><span class="hljs-number">101</span>         <span class="hljs-comment">// failure&#xFF0C;&#x503C;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;100</span>
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"numeric types","level":"1.4.1.2","depth":3,"next":{"title":"object","level":"1.4.1.3","depth":3,"path":"reference/object.md","ref":"reference/object.md","articles":[]},"previous":{"title":"string","level":"1.4.1.1","depth":3,"path":"reference/string.md","ref":"reference/string.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"JSON Schema Tutorial","gitbook":">=3.0.0"},"file":{"path":"reference/numeric.md","mtime":"2018-06-21T11:52:24.472Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:53:29.807Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+
